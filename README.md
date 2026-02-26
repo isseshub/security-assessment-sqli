@@ -1,38 +1,40 @@
-Security Assessment – SQL Injection (Attack vs Defense)
-Översikt
+# Security Assessment – SQL Injection (Attack vs Defense)
+
+## Översikt
 
 Detta labb demonstrerar hur en SQL Injection-sårbarhet kan påverka ett kreditbeslut baserat på UC-liknande kreditdata, samt hur sårbarheten åtgärdas med säkra kodningsprinciper.
 
 Projektet består av:
-
-Attack-version – sårbar implementation
-
-Defense-version – åtgärdad implementation
+- **Attack-version** – sårbar implementation
+- **Defense-version** – åtgärdad implementation
 
 Labbet körs lokalt i isolerad miljö och är avsett för utbildningssyfte.
 
-Arkitektur
+---
+
+## Arkitektur
 
 Vendor API → Bankapplikation → SQLite-databas
 
 Två versioner av bankapplikationen:
+- Port 5002 – Sårbar (Attack)
+- Port 5003 – Skyddad (Defense)
 
-Port 5002 – Sårbar (Attack)
+---
 
-Port 5003 – Skyddad (Defense)
+## Teknik
 
-Teknik
+- Python 3  
+- Flask  
+- SQLite  
 
-Python 3
+---
 
-Flask
-
-SQLite
-
-Snabbstart
+## Snabbstart
 
 Installera beroenden:
 
+```bash
 python3 -m venv .venv
 source .venv/bin/activate
 pip install -r requirements.txt
